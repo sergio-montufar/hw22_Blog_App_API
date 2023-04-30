@@ -19,7 +19,7 @@ class BlogView(View):
   def post(self, request):
     body = GetBody(request)
     print(body)
-    blog = Blog.objects.create(name=body["name"], age=body["age"])
+    blog = Blog.objects.create(title=body["title"], body=body["body"])
     finalData = json.loads(serialize("json", [blog]))
     return JsonResponse(finalData, safe=False)
 

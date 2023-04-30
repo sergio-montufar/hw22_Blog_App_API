@@ -20,6 +20,6 @@ from blog.views import BlogView, BlogViewID
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("/blog", BlogView.as_view()),
-    path("/blog/<id>/", BlogViewID.as_view())
+    path("blog/", BlogView.as_view()),
+    path("blog/<id>/", BlogViewID.as_view())
 ]
